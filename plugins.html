@@ -1,0 +1,384 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="Plugins Used - 2014 bbPress Survey Results">
+	<meta name="author" content="Mercime for bbPress.org">
+	<meta name="keywords" content="bbPress, bbPress.org, survey, survey results, plugins">
+	<title>bbPress 2014 Survey Results</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<link href="css/custom.css" rel="stylesheet" type="text/css" media="screen" />
+	<style type="text/css">
+	p { margin: 0 auto; padding: 2em;}
+	.node { cursor: pointer;}
+	.overlay{ background-color:transparent;}
+	.node circle { fill: #fff; stroke: #2d8e42; stroke-width: 1.5px; }
+	.node text { font-size:1em; }
+	.link { fill: none; stroke: #ccc; stroke-width: 2px; }
+	.templink { fill: none; stroke: red; stroke-width: 2px; }
+	.ghostCircle.show{ display:block;}
+	.ghostCircle, .activeDrag .ghostCircle{ display: none; }
+	.panel-content { margin:0; padding:0;}
+	.panel-content:first-child {text-align:center;}
+	#plugins {clear:both; margin: 1em auto; max-width:90%;}
+	</style>
+	<script src="js/modernizr.min.js"></script>
+</head>
+<body>
+	<div id="bbpress" class="hfeed site">
+		<div id="header" class="row index">
+			<header class="represent" role="banner">
+				<h1 class="title"><img src="images/bbPress.png" class="logo" alt="bbPress Logo" /> 2014 Survey Results</h1>
+			</header>
+		</div><!-- #header -->
+		<main id="content" class="main-content" role="main">
+			<section class="row gen-info">
+				<header class="entry-header">
+					<h2 class="entry-title">bbPress Plugins</h2>
+				</header>
+				<article>
+					<div id="plugins-used" class="block">
+						<div class="row">
+							<div class="panel-content col12">
+								<form>
+									<label><input type="radio" name="mode" value="radialtree">Radial Tree</label>
+									<label><input type="radio" name="mode" value="radialcluster">Radial Cluster</label>
+									<label><input type="radio" name="mode" value="tree">Tree</label>
+									<label><input type="radio" name="mode" value="cluster" checked>Cluster</label>
+								</form>
+							</div><!-- .panel-content -->
+						</div><!-- .row-->
+					</div><!-- #plugins-used -->
+				</article>
+			</section><!-- .gen-info -->
+		</main>
+	</div><!-- #bbpress -->
+	<div id="plugins">
+	<script src="js/d3.min.js"></script>
+	<script>
+	var width = 1200,
+		height = 1200;
+	var diameter = 600;
+	var duration = 2000;
+
+	d3.selectAll("input").on("change", change);
+
+	function change() {
+		if (this.value === "radialtree")
+			transitionToRadialTree();
+		else if (this.value === "radialcluster")
+			transitionToRadialCluster();
+		else if (this.value === "tree")
+			transitionToTree();
+		else
+			transitionToCluster();
+	};
+
+	function transitionToRadialTree() {
+
+		var nodes = radialTree.nodes(root), // recalculate layout
+			links = radialTree.links(nodes);
+		
+		svg.transition().duration(duration)
+			.attr("transform", "translate(" + (width/2) + "," +
+											  (height/2) + ")");
+			// set appropriate translation (origin in middle of svg)
+		
+		link.data(links)
+			.transition()
+			.duration(duration)
+			.style("stroke", "#fc8d62")
+			.attr("d", radialDiagonal); //get the new radial path
+
+		node.data(nodes)
+			.transition()
+			.duration(duration)
+			.attr("transform", function(d) {
+				return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
+			});
+		
+		node.select("circle")
+			.transition()
+			.duration(duration)
+			.style("stroke", "#984ea3");
+		
+	};
+
+	function transitionToRadialCluster() {
+
+		var nodes = radialCluster.nodes(root), // recalculate layout
+			links = radialCluster.links(nodes);
+		
+		svg.transition().duration(duration)
+			.attr("transform", "translate(" + (width/2) + "," +
+											  (height/2) + ")");
+			// set appropriate translation (origin in middle of svg)
+		
+		link.data(links)
+			.transition()
+			.duration(duration)
+			.style("stroke", "#66c2a5")
+			.attr("d", radialDiagonal); //get the new radial path
+
+		node.data(nodes)
+			.transition()
+			.duration(duration)
+			.attr("transform", function(d) {
+				return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")";
+			});
+		
+		node.select("circle")
+			.transition()
+			.duration(duration)
+			.style("stroke", "#4daf4a");
+
+	};
+
+	function transitionToTree() {
+		
+		var nodes = tree.nodes(root), //recalculate layout
+			links = tree.links(nodes);
+
+		svg.transition().duration(duration)
+			.attr("transform", "translate(40,0)");
+			
+		link.data(links)
+			.transition()
+			.duration(duration)
+			.style("stroke", "#e78ac3")
+			.attr("d", diagonal); // get the new tree path
+
+		node.data(nodes)
+			.transition()
+			.duration(duration)
+			.attr("transform", function (d) {
+				return "translate(" + d.y + "," + d.x + ")";
+			});
+		
+		node.select("circle")
+			.transition()
+			.duration(duration)
+			.style("stroke", "#377eb8");
+
+	};
+
+	function transitionToCluster() {
+		
+		var nodes = cluster.nodes(root), //recalculate layout
+			links = cluster.links(nodes);
+		
+		svg.transition().duration(duration)
+			.attr("transform", "translate(40,0)");
+	  
+		link.data(links)
+			.transition()
+			.duration(duration)
+			.style("stroke", "#8da0cb")
+			.attr("d", diagonal); //get the new cluster path
+
+		node.data(nodes)
+			.transition()
+			.duration(duration)
+			.attr("transform", function (d) {
+				return "translate(" + d.y + "," + d.x + ")";
+			});
+		
+		node.select("circle")
+			.transition()
+			.duration(duration)
+			.style("stroke", "#e41a1c");
+		
+	};
+
+	var root; // store data in a variable accessible by all functions
+
+	var tree = d3.layout.tree()
+		.size([height, width - 160]);
+
+	var cluster = d3.layout.cluster()
+		.size([height, width - 160]);
+
+	var diagonal = d3.svg.diagonal()
+		.projection(function (d) {
+		return [d.y, d.x];
+	});
+
+	var radialTree = d3.layout.tree()
+		.size([360, diameter / 2 ])
+		.separation(function(a, b) {
+			return (a.parent == b.parent ? 1 : 2) / a.depth;
+		});
+
+	var radialCluster = d3.layout.cluster()
+		.size([360, diameter / 2 ])
+		.separation(function(a, b) {
+			return (a.parent == b.parent ? 1 : 2) / a.depth;
+		});
+
+	var radialDiagonal = d3.svg.diagonal.radial()
+		.projection(function(d) {
+			return [d.y, d.x / 180 * Math.PI];
+		});
+
+
+	var svg = d3.select("#plugins").append("svg")
+		.attr("width", width)
+		.attr("height", height)
+		.append("g")
+		.attr("transform", "translate(40,0)");
+
+		var root = getData(),
+			nodes = cluster.nodes(root),
+			links = cluster.links(nodes);
+
+		var link = svg.selectAll(".link")
+			.data(links)
+		   .enter()
+			.append("path")
+			.attr("class", "link")
+			.style("stroke", "#8da0cb")
+			.attr("d", diagonal);
+
+		var node = svg.selectAll(".node")
+			.data(nodes)
+		   .enter()
+			.append("g")
+			.attr("class", "node")
+			.attr("transform", function (d) {
+			return "translate(" + d.y + "," + d.x + ")";
+		})
+
+		node.append("circle")
+			.attr("r", 4.5)
+			.style("stroke", "#e41a1c");
+
+		node.append("text")
+			.attr("dx", function (d) { return d.children ? -8 : 8; })
+			.attr("dy", 3)
+			.style("text-anchor", function (d) { return d.children ? "end" : "start"; })
+			.text(function (d) { return d.name; });
+
+
+	function getData() {
+		return {
+		"name": "bbPress",
+		"children": [
+			{
+				"name": "bbPress-Specific",
+				"children": [
+					{ "name": "GD bbPress Attachments" },
+					{ "name": "GD bbPress Tools" },
+					{ "name": "bbPress Enable TinyMCE Visual Tab" },
+					{ "name": "Buddy-bbPress Support Topic" },
+					{ "name": "bbPress - Private Replies" },
+					{ "name": "bbPress Stay Checked" },
+					{ "name": "bbPress Topics for Posts" },
+					{ "name": "bbPress - Mark As Read" },
+					{ "name": "bbPress Notices" },
+					{ "name": "bbPress - Report Content" },
+					{ "name": "bbPress Like Button" },
+					{ "name": "bbPress Search Widget" },
+					{ "name": "bbPress WP Tweaks" },
+					{ "name": "bbPress2 BBCode" },
+					{ "name": "bbPress - Canned Replies" },
+					{ "name": "bbPress Admin Bar Addition" },
+					{ "name": "bbPress Digest" },
+					{ "name": "bbPress New Topic Notifications" },
+					{ "name": "bbPress Notify" },
+					{ "name": "bbPress Pencil Unread" },
+					{ "name": "bbPress Signature" },
+					{ "name": "GD bbPress Toolbox Pro" },
+					{ "name": "GD bbPress Widgets" },
+					{ "name": "bbp Topic Count" },
+					{ "name": "bbP topic views" },
+					{ "name": "bbPress - No Admin" },
+					{ "name": "bbPress Custom Topic & Reply Notifications" },
+					{ "name": "bbPress Direct Quotes" },
+					{ "name": "bbPress Moderation" },
+					{ "name": "bbPress Notify " },
+					{ "name": "bbPress Post Toolbar" },
+					{ "name": "bbpress reCaptcha" },
+					{ "name": "bbPress Report Content" },
+					{ "name": "bbPress String Swap" },
+					{ "name": "bbPress Topic Thumbnails" },
+					{ "name": "bbPress2 Shortcode Whitelist" },
+					{ "name": "bbp avatar" },
+					{ "name": "bbp last post" },
+					{ "name": "bbp Profile Information" },
+					{ "name": "bbP Signature" },
+					{ "name": "bbPress - Admin Notes" },
+					{ "name": "bbPress - Auto Delete Spam Replies" },
+					{ "name": "bbPress - Auto Tags" },
+					{ "name": "bbPress - Canned Replies" },
+					{ "name": "bbPress auto subscribe for new topics and replies" },
+					{ "name": "bbPress Code Snippets" },
+					{ "name": "bbPress Custom Reply Notifications" },
+					{ "name": "bbPress Export and Import" },
+					{ "name": "bbPress Genesis Extend" },
+					{ "name": "bbPress Ignore User" },
+					{ "name": "bbPress Mass Delete Users" },
+					{ "name": "bbPress New Topic Emailer" },
+					{ "name": "bbPress Notifications" },
+					{ "name": "bbPress Quotes" },
+					{ "name": "bbPress Simple View Counts" },
+					{ "name": "bbpress-loadmore-topics" },
+					{ "name": "Better bbPress Signature" },
+					{ "name": "Black Studio TinyMCE" },
+					{ "name": "EDD bbPress Support Dashboard" },
+					{ "name": "Tehnik BBPress Permissions" }
+				]
+			}, {
+				"name": "bbPress-Support",
+				"children": [
+					{ "name": "BuddyPress" },
+					{ "name": "myCRED" },
+					{ "name": "Wangguard" },
+					{ "name": "Reply By Email" },
+					{ "name": "WP Stop Forum Spam" }
+				]
+			}, {
+				"name": "bbPress Eearly 2.0+",
+				"children": [
+					{ "name": "Search bbpress 2.0" },
+					{ "name": "Bbpress Latest Discussion" },
+					{ "name": "GetShopped Support Forums" }
+				]
+			}, {
+				"name": "bbPress-Legacy",
+				"children": [
+					{ "name": "Human Test" },
+					{ "name": "Report Post Form" },
+					{ "name": "Select bbPress Custom Fields" }
+				]
+			}, {
+				"name": "Others",
+				"children": [
+					{ "name": "None/Yet" },
+					{ "name": "Custom bbPress Plugins" },
+					{ "name": "Too Many to list" }
+				]
+			}
+		]
+	};
+	}
+	</script>
+	</div>								
+							
+
+	<div class="buttons clearfix">
+		<a href="index.html" class="button" alt="Back to the Survey Results Dashboard ">Back to the Survey Results Dashboard </a>
+		<a href="http://bbPress.org/blog/" class="button" alt="Back to the bbPress 2014 Survey Report">Back to the Survey Report</a> 
+	</div>
+	<div id="footer" class="row">	
+		<footer class="col12" role="contentinfo">
+			<p>&copy; 2014 <a href="../humans.txt" alt="bbPress, Forums for WordPress">bbPress</a>.</p>
+		</footer>
+	</div><!-- #footer -->	
+	<a href="#" class="scroll-to-top"> &uarr; </a>			
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bbp.js"></script>
+</body>
+</html>

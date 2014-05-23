@@ -1,0 +1,1048 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="2014 bbPress Survey Results">
+	<meta name="author" content="Mercime for bbPress.org">
+	<meta name="keywords" content="bbPress, bbPress.org, survey, survey results">
+	<title>bbPress 2014 Survey Results</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<link href="css/custom.css" rel="stylesheet" type="text/css" media="screen" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/Chart.js"></script>
+	<script src="js/modernizr.min.js"></script>
+	<!--[if lte IE 9]>
+		<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div class="warning"><noscript>For full functionality of this page, it is necessary to enable JavaScript in your web browser. Following are the <a href="http://www.enable-javascript.com/" target="_blank"> instructions on how to enable JavaScript in your web browser</a>. <br /><br />If you prefer not to enable Javascript, you can just <a href="images/2014-bbpress-survey-results.jpg">click on this link</a> to view the screenshot of the charts and visualizations or go <a href="http://bbpress.org/blog">back to the 2014 bbPress Survey Report</a></noscript></div>
+		
+	<div id="bbpress" class="hfeed site">
+		<div id="header" class="row index">
+			<header class="represent" role="banner">
+				<h1 class="title"><img src="images/bbPress.png" class="logo" alt="bbPress Logo" /> 2014 Survey Results</h1>
+			</header>
+		</div><!-- #header -->
+
+		<main id="content" class="main-content" role="main">
+		
+			<section class="row gen-info">
+				<header class="entry-header">
+					<h2 class="entry-title gen">General Information</h2>
+				</header>
+
+				<div id="geninfo" class="block">
+					<div class="row">
+
+						<div class="grid col12">
+							<article class="box">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-globe"></i>
+										<h3>183 Survey Participants from 37 Countries</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">					
+									<ul class="countries row">
+										<li class="icon australia"> Australia</li> 
+										<li class="icon brazil"> Brazil</li> 
+										<li class="icon canada"> Canada</li>
+										<li class="icon china"> China</li> 
+										<li class="icon colombia"> Colombia</li>
+										<li class="icon croatia"> Croatia</li>
+										<li class="icon czech-republic"> Czech Republic</li>
+										<li class="icon denmark"> Denmark</li> 
+										<li class="icon finland"> Finland</li> 
+										<li class="icon france"> France</li> 
+										<li class="icon germany"> Germany</li> 
+										<li class="icon greece"> Greece</li> 
+										<li class="icon india"> India</li> 
+										<li class="icon indonesia"> Indonesia</li> 
+										<li class="icon italy"> Italy</li>
+										<li class="icon latvia"> latvia</li>
+										<li class="icon luxembourg"> Luxembourg</li>
+										<li class="icon malaysia"> Malaysia</li> 
+										<li class="icon moldova"> Moldova</li> 
+										<li class="icon netherlands"> Netherlands</li> 
+										<li class="icon new-zealand"> New Zealand</li> 
+										<li class="icon nigeria"> Nigeria</li> 
+										<li class="icon norway"> Norway</li> 
+										<li class="icon philippines"> Philippines</li> 
+										<li class="icon romania"> Romania</li> 
+										<li class="icon russia"> Russia</li> 
+										<li class="icon serbia"> Serbia</li> 
+										<li class="icon slovakia"> Slovakia</li> 
+										<li class="icon south-africa"> South Africa</li> 
+										<li class="icon spain"> Spain</li> 
+										<li class="icon sweden"> Sweden</li> 
+										<li class="icon switzerland"> Switzerland</li> 
+										<li class="icon turkey"> Turkey</li>
+										<li class="icon ukraine"> Ukraine</li> 
+										<li class="icon united-kingdom"> United Kingdom</li> 
+										<li class="icon united-states"> United States</li> 
+										<li class="icon yemen"> Yemen</li> 
+									</ul>
+								</div><!-- .panel-content -->
+							</article>
+						</div><!-- .col12 -->
+
+						<div class="grid col4">
+							<article class="gender pie">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-adjust"></i>
+										<h3>Gender</h3>
+										<i class="fa fa-search-plus action"></i>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content genders">
+									<div class="chart-container">
+										<canvas id="genders" width="160" height="160"></canvas>
+									</div>
+									<ul class="legend">
+										<li><span class="gender-male">&block;</span> Male: 89&percnt;</li>
+										<li><span class="gender-female">&block;</span> Female: 11&percnt;</li> 
+									</ul>
+								</div><!-- .panel-content -->
+							</article>
+						</div>	<!-- .col4 -->	
+						<div class="grid col4">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-flag-o"></i>
+										<h3>Top Countries Represented</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content" id="top-countries">							
+									<ol class="top-countries">
+										<li>United States: 36&percnt;</li> 	
+										<li>United Kingdom: 8&percnt;</li> 	
+										<li>Germany: 6&percnt;</li> 	
+										<li>Netherlands: 5&percnt;</li>	
+										<li>Canada & Italy: 4&percnt;</li>	
+										<li>Australia, France, & Spain: 3&percnt;</li>
+										<li>Brazil, Denmark. India, & Turkey: 2&percnt;</li>
+									</ol>
+								</div><!-- .panel-content -->
+							</article>
+						</div><!-- .col4 -->				
+						<div class="grid col4 end">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-compass"></i>
+										<h3>Top U.S. States Represented</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content" id="top-states">
+									<ol class="top-states">
+										<li>California: 18&percnt;</li> 	
+										<li>New York: 9&percnt;</li> 
+										<li>Texas: 8&percnt;</li>
+										<li>Ohio: 6&percnt;</li> 
+										<li>Pennsylvania, Massachusetts, & New Jersey: 5&percnt;</li>
+										<li>MO, MN, SC, VA, MI, GA, CO, &amp; IL: 3&percnt;</li>	
+									</ol>
+								</div><!-- .panel-content -->
+							</article>
+						</div><!-- .col4 -->							
+					</div><!-- .row -->
+				</div><!-- #geninfo -->
+			</section><!-- .gen-info -->
+			
+			<section class="row your-sites">
+				<header class="entry-header">
+					<h2 class="entry-title">Your bbPress Installations</h2>
+				</header><!-- .entry-header -->
+
+				<div id="yoursites" class="block">
+				
+					<div class="row">
+						<div class="col12">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-sun-o"></i>
+										<h3>bbPress Versions Then and Now</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<div class="grid col6 down">
+										<table>
+											<thead>
+												<tr>
+													<th>Versions</th>
+													<th>Used First</th>
+													<th>Used Now</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>bbPress 0.7.2</td>
+													<td>4&percnt;</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>bbPress 0.8+</td>
+													<td>3&percnt;</td>
+													<td>0</td>
+												</tr>
+												<tr>
+													<td>bbPress 09+</td>
+													<td>7&percnt;</td>
+													<td>1&percnt;</td>
+												</tr>
+												<tr>
+													<td>bbPress 1.0+</td>
+													<td>20&percnt;</td>
+													<td>5&percnt;</td>
+												</tr>
+												<tr>
+													<td>bbPress 2.0+</td>
+													<td>20&percnt;</td>
+													<td>2&percnt;</td>
+												</tr>
+												<tr>
+													<td>bbPress 2.1+</td>
+													<td>6&percnt;</td>
+													<td>1&percnt;</td>
+												</tr>
+												<tr>
+													<td>bbPress 2.2+</td>
+													<td>3&percnt;</td>
+													<td>1&percnt;</td>
+												</tr>
+												<tr>
+													<td>bbPress 2.3+</td>
+													<td>10&percnt;</td>
+													<td>3&percnt;</td>
+												</tr>
+												<tr>
+													<td>bbPress 2.4+</td>
+													<td>9&percnt;</td>
+													<td>10&percnt;</td>
+												</tr>
+												<tr>
+													<td>bbPress 2.5+</td>
+													<td>18&percnt;</td>
+													<td>88&percnt;</td>
+												</tr>
+											</tbody>
+										</table>
+									</div><!-- .col6 -->
+									<div class="grid col6 end down">
+										<div class="chart-container">
+											<canvas id="bbp-first-now" width="500" height="360"></canvas>
+										</div>
+									</div><!-- .col6 -->
+								</div>
+							</article>
+						</div><!-- .col12 -->
+					</div><!-- .row -->				
+				
+					<div class="row">
+						<div class="grid col6">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>WordPress Versions Installed</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="wp-version-now clearfix">
+										<dt>WP 3.8+</dt>
+											<dd class="first bar"><span class="first-one slide" data-percent="98"><em>98&percnt;</em></span></dd>
+										<dt>WP 3.7+</dt>
+											<dd class="second bar"><span class="second-one slide" data-percent="5"><em>5&percnt;</em></span></dd>
+										<dt>WP 3.6+</dt>
+											<dd class="third bar"><span class="third-one slide" data-percent="2"><em>2&percnt;</em></span></dd>
+										<dt>Other Option</dt>
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="1"><em>1&percnt;</em></span></dd>
+										<dt>WP 3.5+</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="1"><em>1&percnt;</em></span></dd>
+										<dt>WP 3.4+</dt>	
+											<dd class="sixth ba"><span class="sixth-one slide" data-percent="1"><em>0</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div><!-- .col6 -->					
+						<div class="grid col6 end">
+							<article class="pie setup">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-adjust"></i>
+										<h3>bbPress Set Up</h3>
+										<i class="fa fa-search-plus action"></i>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<div class="chart-container">
+										<canvas id="bbp-setup"></canvas>
+									</div>
+									<ul class="legend">
+										<li><span class="setup-easy">&block;</span> Easy: 46&percnt;</li>
+										<li><span class="setup-very-easy">&block;</span> Very Easy: 29&percnt;</li>
+										<li><span class="setup-neutral">&block;</span> Neutral: 16&percnt;</li>
+										<li><span class="setup-hard">&block;</span> Hard: 7&percnt;</li> 
+										<li><span class="setup-very-hard">&block;</span> Very Hard: 2&percnt;</li>
+																				
+									</ul>
+								</div><!-- .panel-content -->
+							</article>
+						</div><!-- .col6 -->
+					</div><!-- .row -->
+				
+					<div class="row">
+						<div class="grid col6">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-user"></i>
+										<h3>bbPress Users</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="bbp-user clearfix">
+										<dt>I use bbPress for my own site.</dt>
+											<dd class="first bar"><span class="first-one slide" data-percent="58"><em>58&percnt;</em></span></dd>
+										<dt>I create sites with bbPress forums for others.</dt>
+											<dd class="second bar"><span class="second-one slide" data-percent="25"><em>25&percnt;</em></span></dd>
+										<dt>I am a Keymaster of a bbPress forums community.	</dt>
+											<dd class="third bar"><span class="third-one slide" data-percent="4"><em>4&percnt;</em></span></dd>
+										<dt>I am an advanced bbPress developer - I can do anything bbPress.	</dt>
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="4"><em>4&percnt;</em></span></dd>
+										<dt>I create themes with support for bbPress forums.</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="4"><em>4&percnt;</em></span></dd>
+										<dt>I have never used bbPress, but am considering it.</dt>	
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="2"><em>2&percnt;</em></span></dd>
+										<dt>I create bbPress plugins.</dt>	
+											<dd class="seventh bar"><span class="seventh-one slide" data-percent="2"><em>2&percnt;</em></span></dd>
+										<dt>I am a member of a bbPress forums community.</dt>
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="1"><em>1&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div>
+						<div class="grid col6 end">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>bbPress Forums Installations</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="bbp-wp clearfix">
+										<dt>WP in domain root</dt>
+											<dd class="first bar"><span class="first-one slide" data-percent="72"><em>72&percnt;</em></span></dd>
+										<dt>WP in physical subdirectory folder</dt>
+											<dd class="second bar"><span class="second-one slide" data-percent="20"><em>20&percnt;</em></span></dd>
+										<dt>WP multisite - sitewide</dt>
+											<dd class="third bar"><span class="third-one slide" data-percent="13"><em>13&percnt;</em></span></dd>
+										<dt>WP multisite - domain root</dt>
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="13"><em>13&percnt;</em></span></dd>
+										<dt>WP in physical subdomain</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="8"><em>8&percnt;</em></span></dd>
+										<dt>WP multisite - one subdirectory subsite</dt>	
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="8"><em>8&percnt;</em></span></dd>
+										<dt>WP multisite - multiple networks</dt>	
+											<dd class="seventh bar"><span class="seventh-one slide" data-percent="7"><em>7&percnt;</em></span></dd>
+										<dt>WP multisite - one subdomain subsite</dt>
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="6"><em>6&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div>
+					</div><!-- .row -->					
+					
+					<div class="row">
+						<div class="grid col6">
+							<article class="words pie">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-dot-circle-o"></i>
+										<h3>bbPress in Your Language</h3>
+										<i class="fa fa-search-plus action"></i>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<div id="languages">
+										<figure>
+											<img src="images/languages.jpg" alt="Visualization of languages used in bbPress forums." /><br />
+											<figcaption><strong>Top Ten</strong>: English (79&percnt;), German (8&percnt;), French (4.5&percnt;), Dutch (4&percnt;), Italian (4&percnt;)), Spanish (4&percnt;)), Danish (2&percnt;), Portugese (2&percnt;), Russian (2&percnt;), and Turkish (2&percnt;).</figcaption>
+										</figure>
+									</div>
+								</div>
+							</article>
+						</div>
+						<div class="grid col6 end">
+							<article class="words pie">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-dot-circle-o"></i>
+										<h3>bbPress Forums Site Types</h3>
+										<i class="fa fa-search-plus action"></i>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">		
+									<div id="sitetypes">
+										<figure>
+											<img src="images/types.jpg" alt="Visualization of types of sites using bbPress forums." />
+											<figcaption><strong>Top Ten</strong>: Generic (37&percnt;), Technical (33&percnt;), Business (30&percnt;), Non-profit(24&percnt;), Gaming (20&percnt;), Artistic (9.5&percnt;), Academic(9&percnt;), Religious (3&percnt;), Scientific(2&percnt;), Clubs &amp; Media (1&percnt;).</figcaption>
+										</figure>
+									</div>
+								</div>
+							</article>
+						</div>						
+					</div><!-- .row -->
+
+				</div><!-- #yoursites  -->
+			</section><!-- .your-sites -->
+
+			<section class="row features-participation">
+				<header class="entry-header">
+					<h2 class="entry-title">Features &amp; Participation</h2>
+				</header><!-- .entry-header -->						
+				
+				<div id="features-participation" class="block">
+
+					<div class="row">
+						<div class="grid col6">
+							<article class="themes">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>Theming bbPress Forums</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content theming">						
+									<dl class="theming-bbp clearfix">
+										<dt>My custom theme/s using bbPress theme compatibility</dt>	
+											<dd class="first bar"><span class="first-one slide" data-percent="41"><em>41&percnt;</em></span></dd>
+										<dt>Free WP theme with default theme compatibility</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="25"><em>25&percnt;</em></span></dd>
+										<dt>My custom theme/s overloading templates in main theme, bbPress theme compatibility disabled</dt>	
+											<dd class="third bar"><span class="third-one slide" data-percent="22"><em>22&percnt;</em></span></dd>
+										<dt>Commercial WP theme with default theme compatibility</dt>	
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="19"><em>19&percnt;</em></span></dd>
+										<dt>Commercial WP theme with bbPress support</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="14"><em>14&percnt;</em></span></dd>
+										<dt>Free WP theme with bbPress support</dt>	
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="14"><em>14&percnt;</em></span></dd>
+										<dt>My custom theme/s with completely custom template loading handlers</dt>
+											<dd class="seventh bar"><span class="seventh-one slide" data-percent="10"><em>10&percnt;</em></span></dd>
+										<dt>Other Option</dt>	
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="4"><em>4&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div><!-- .col6 -->
+						<div class="grid col6 end">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>Preferred bbPress Theme Features</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">	
+									<dl class="theme-features clearfix">
+										<dt>Responsive</dt>	
+											<dd class="first bar"><span class="first-one slide" data-percent="66"><em>66&percnt;</em></span></dd>
+										<dt>Light and Fresh Design</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="58"><em>58&percnt;</em></span></dd>
+										<dt>Compatible with the latest bbPress version</dt>	
+											<dd class="third bar"><span class="third-one slide" data-percent="51"><em>51&percnt;</em></span></dd>
+										<dt>Responsive, mobile-first</dt>	
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="28"><em>28&percnt;</em></span></dd>
+										<dt>Translation-ready</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="24"><em>24&percnt;</em></span></dd>
+										<dt>Dark and Edgy Design</dt>	
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="6"><em>6&percnt;</em></span></dd>
+										<dt>Mobile App</dt>
+											<dd class="seventh bar"><span class="seventh-one slide" data-percent="6"><em>6&percnt;</em></span></dd>
+										<dt>Other Option</dt>	
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="4"><em>4&percnt;</em></span></dd>
+										<dt>RTL support</dt>	
+											<dd class="ninth bar"><span class="eighth-one slide" data-percent="2"><em>2&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div><!-- .col6 -->
+					</div><!-- .row -->	
+						
+					<div class="row">
+						<div class="col12">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-cogs"></i>
+										<h3>bbPress Plugins Activated</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content" id="activatedplugins">						
+									<div class="grid col3">
+										<h4>Top 20 bbPress-Specific</h4>
+										<ol>
+											<li>GD bbPress Attachments</li>
+											<li>GD bbPress Tools</li>
+											<li>bbPress Enable TinyMCE Visual Tab</li>
+											<li>Buddy-bbPress Support Topic</li>
+											<li>bbPress - Private Replies</li>
+											<li>bbPress Stay Checked</li>
+											<li>bbPress Topics for Posts</li>
+											<li>bbPress - Mark As Read</li>
+											<li>bbPress Notices</li>
+											<li>bbPress - Report Content</li>
+											<li>bbPress Like Button</li>
+											<li>bbPress Search Widget</li>
+											<li>bbPress WP Tweaks</li>
+											<li>bbPress2 BBCode</li>
+											<li>bbPress - Canned Replies</li>
+											<li>bbPress Admin Bar Addition</li>
+											<li>bbPress Digest</li>
+											<li>bbPress New Topic Notifications</li>
+											<li>bbPress Notify</li>
+											<li>bbPress Pencil Unread</li>
+										</ol>
+									</div>
+									<div class="grid col3">
+										<h4>bbPress Support</h4>
+										<ol>
+											<li>BuddyPress</li>
+											<li>myCRED</li>
+											<li>Wangguard</li>
+											<li>Reply By Email</li>
+											<li>WP Stop Forum Spam</li>
+										</ol>
+										<h4>bbPress Early 2.0</h4>
+										<ol>
+											<li>Search bbpress 2.0</li>
+											<li>Bbpress Latest Discussion</li>
+											<li>GetShopped Support Forums</li>
+										</ol>
+										<h4>bbPress Legacy</h4>
+										<ol>
+											<li>Human Test</li>
+											<li>Report Post Form</li>
+											<li>Select bbPress Custom Fields</li>
+										</ol>
+										<h4>Others</h4>
+										<ol>
+											<li>None/Yet</li>
+											<li>Custom bbPress Plugins</li>
+											<li>Too Many to list</li>
+										</ol>
+										&ast; Plugins mentioned can be found in this <a href="https://docs.google.com/spreadsheets/d/1IoKhQJ6PuKCvtmRTsJ5Rb_slGMCxYUAyJpPK9FhK-D0/">google spreadsheet</a>.
+									</div>
+									<div class="grid col6 end">
+										
+										<figure>
+											<a href="plugins.html"><img src="images/plugins.jpg" alt="Visualization of bbPress plugins used" style="width:500px;height:auto" /></a>
+											<figcaption>Click on image above to view larger version.</figcaption>
+										</figure
+									</div>
+								</div>
+							</article>
+						</div><!-- .col6 -->
+					</div><!-- .row -->	
+						
+					<div class="row">
+						<div class="grid col6">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>Contributed to bbPress Development</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content contribute-dev">
+									<dl class="contributed clearfix">
+										<dt>No</dt/>	
+											<dd class="first bar"><span class="first-one slide" data-percent="73"><em>73&percnt;</em></span></dd>
+										<dt>Yes</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="27"><em>27&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+							<article class="ways-contributed">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>Ways Contributed to bbPress Development</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="contributions clearfix">
+										<dt>Helped out in bbPress forums </dt>	
+											<dd class="first bar"><span class="first-one slide" data-percent="67"><em>67&percnt;</em></span></dd>
+										<dt>bbPress Trac: Reported Bugs </dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="43"><em>43&percnt;</em></span></dd>
+										<dt>Submitted translation/s of bbPress </dt>	
+											<dd class="third bar"><span class="third-one slide" data-percent="31"><em>31&percnt;</em></span></dd>
+										<dt>bbPress Trac: Submitted patches	</dt>	
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="17"><em>17&percnt;</em></span></dd>
+										<dt>Submitted a bbPress plugin in the WP plugin repository</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="13"><em>13&percnt;</em></span></dd>
+										<dt>bbPress Trac: Tested patches</dt>	
+											<dd class="seventh bar"><span class="seventh-one slide" data-percent="11"><em>11&percnt;</em></span></dd>
+										<dt>Joined in bbPress IRC dev chat</dt>	
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="7"><em>7&percnt;</em></span></dd>
+										<dt>Wrote article/s in bbPress Codex</dt>
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="7"><em>7&percnt;</em></span></dd>
+										<dt>Submitted a theme which supports bbPress in the WP theme repository</dt>
+											<dd class="ninth bar"><span class="ninth-one slide" data-percent="2"><em>2&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div><!-- .col6 -->
+						<div class="grid col6 end">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-globe"></i>
+										<h3>Signed Up to Contribute to bbPress Development</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content contribute">						
+									<p><strong>23 respondents from 14 countries</strong> signed up to contribute. We will be contacting you soon. Thank you!</p>
+									<ul class="volunteers row">
+										<li class="icon united-states"> United States (5)</li>
+										<li class="icon brazil"> Brazil (2)</li>
+										<li class="icon india"> India (2)</li> 
+										<li class="icon netherlands"> Netherlands (2)</li> 
+										<li class="icon turkey"> Turkey (2)</li> 
+										<li class="icon australia"> Australia</li> 
+										<li class="icon canada"> Canada</li>
+										<li class="icon colombia"> Colombia</li> 
+										<li class="icon france"> France</li> 
+										<li class="icon italy"> Italy</li> 
+										<li class="icon nigeria"> Nigeria</li> 
+										<li class="icon spain"> Spain</li> 
+										<li class="icon united-kingdom"> United Kingdom</li>
+										<li class="icon yemen"> Yemen</li>
+									</ul>
+								</div>
+							</article>
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>Devices Used to Access Forums</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="bbp-devices clearfix">
+										<dt>Desktop</dt>	
+											<dd class="first bar"><span class="first-one slide" data-percent="73"><em>73&percnt;</em></span></dd>
+										<dt>Laptop</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="48"><em>48&percnt;</em></span></dd>
+										<dt>Smartphone</dt>	
+											<dd class="third bar"><span class="third-one slide" data-percent="46"><em>46&percnt;</em></span></dd>
+										<dt>Tablet</dt>	
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="20"><em>20&percnt;</em></span></dd>
+										<dt>Television</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="0"><em>0</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div><!-- .col6 -->
+					</div><!-- .row -->
+				
+				</div><!-- #features-participation  -->
+			</section><!-- .features-participation -->
+
+			<section class="row opinions-requests">
+				<header class="entry-header">
+					<h2 class="entry-title">Opinions &amp; Requests</h2>
+				</header><!-- .entry-header -->						
+				
+				<div id="opinions-requests" class="block">	
+
+					<div class="row">
+						<div class="grid col6">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>bbPress Strengths/Opportunities</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="strengths clearfix">
+										<dt>Free</dt>	
+											<dd class="first bar"><span class="first-one slide" data-percent="78"><em>78&percnt;</em></span></dd>
+										<dt>Open-sourced</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="74"><em>74&percnt;</em></span></dd>
+										<dt>bbPress is an official WordPress plugin</dt>	
+											<dd class="third bar"><span class="third-one slide" data-percent="69"><em>69&percnt;</em></span></dd>
+										<dt>bbPress integrates seamlessly with WordPress and BuddyPress</dt>	
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="67"><em>67&percnt;</em></span></dd>
+										<dt>Easy to set up</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="51"><em>51&percnt;</em></span></dd>
+										<dt>Compatible with other WP plugins</dt>	
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="51"><em>51&percnt;</em></span></dd>
+										<dt>Theme Compatibility</dt>
+											<dd class="seventh bar"><span class="seventh-one slide" data-percent="46"><em>46&percnt;</em></span></dd>
+										<dt>bbPress is extensible</dt>	
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="37"><em>37&percnt;</em></span></dd>
+										<dt>bbPress lets you own your own data</dt>
+											<dd class="ninth bar"><span class="ninth-one slide" data-percent="32"><em>32&percnt;</em></span></dd>
+										<dt>Responsive</dt>	
+											<dd class="tenth bar"><span class="tenth-one slide" data-percent="31"><em>31&percnt;</em></span></dd>
+										<dt>bbPress has community support</dt>	
+											<dd class="eleventh bar"><span class="eleventh-one slide" data-percent="23"><em>23&percnt;</em></span></dd>
+										<dt>Translation in your language</dt>
+											<dd class="twelvth bar"><span class="twelfth-one slide" data-percent="15"><em>15&percnt;</em></span></dd>
+										<dt>Positive feedback from community</dt>
+											<dd class="thirteenth bar"><span class="thirteenth-one slide" data-percent="8"><em>8&percnt;</em></span></dd>
+										<dt>Documentation has improved</dt>
+											<dd class="fourteenth bar"><span class="thirteenth-one slide" data-percent="8"><em>8&percnt;</em></span></dd>
+										<dt>Other Option</dt>
+											<dd class="fifteenth bar"><span class="thirteenth-one slide" data-percent="5"><em>5&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div><!-- .col6 -->				
+						<div class="grid col6 end">
+							<article class="weaknesses">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>bbPress Weaknesses/Threats</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="threats clearfix">
+										<dt>Lacking features as compared to traditional forum software</dt>
+											<dd class="first bar"><span class="first-one slide" data-percent="58"><em>58&percnt;</em></span></dd>
+										<dt>Need more features added to the plugin</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="57"><em>57&percnt;</em></span></dd>
+										<dt>Not sure about the future of the plugin</dt>	
+											<dd class="third bar"><span class="third-one slide" data-percent="54"><em>54&percnt;</em></span></dd>
+										<dt>Documentation is not complete</dt>	
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="38"><em>38&percnt;</em></span></dd>
+										<dt>Performance</dt>	
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="33"><em>33&percnt;</em></span></dd>
+										<dt>Spam</dt>
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="27"><em>27&percnt;</em></span></dd>
+										<dt>bbPress is not compatible with some themes</dt>	
+											<dd class="seventh bar"><span class="seventh-one slide" data-percent="23"><em>23&percnt;</em></span></dd>
+										<dt>Developers are all volunteers</dt>	
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="23"><em>23&percnt;</em></span></dd>
+										<dt>Confusing for users to navigate</dt>	
+											<dd class="ninth bar"><span class="ninth-one slide" data-percent="20"><em>20&percnt;</em></span></dd>
+										<dt>Other Options</dt>
+											<dd class="tenth bar"><span class="tenth-one slide" data-percent="19"><em>19&percnt;</em></span></dd>
+										<dt>bbPress is not compatible with some WP plugins</dt>	
+											<dd class="eleventh bar"><span class="eleventh-one slide" data-percent="18"><em>18&percnt;</em></span></dd>
+										<dt>Need phpdocs for developers</dt>	
+											<dd class="twelvth bar"><span class="twelfth-one slide" data-percent="14"><em>14&percnt;</em></span></dd>
+										<dt>Confusing to setup</dt>
+											<dd class="thirteenth bar"><span class="thirteenth-one slide" data-percent="13"><em>13&percnt;</em></span></dd>
+										<dt>Not what I expected</dt>
+											<dd class="fourteenth bar"><span class="thirteenth-one slide" data-percent="6"><em>6&percnt;</em></span></dd>
+										<dt>Translation in your language is not available</dt>
+											<dd class="fifteenth bar"><span class="thirteenth-one slide" data-percent="5"><em>5&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+						</div><!-- .col6 -->				
+					</div><!-- .row -->	
+
+					<div class="row">
+						<div class="grid col6">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>Evaluated other Forums Software</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content forums-eval">
+									<dl class="evaluated clearfix">
+										<dt>Yes</dt/>	
+											<dd class="first bar"><span class="first-one slide" data-percent="88"><em>88&percnt;</em></span></dd>
+										<dt>No</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="12"><em>12&percnt;</em></span></dd>
+									</dl>
+								</div>
+							</article>
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>Other Forums Software Evaluated</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="forums-evaluated clearfix">
+										<dt>phpBB forums</dt>
+											<dd class="first bar"><span class="first-one slide" data-percent="72"><em>72&percnt;</em></span></dd>
+										<dt>SimplePress plugin</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="44"><em>44&percnt;</em></span></dd>
+										<dt>Vanilla forums</dt>	
+											<dd class="third bar"><span class="third-one slide" data-percent="43"><em>43&percnt;</em></span></dd>
+										<dt>vbulletin forums</dt>	
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="40"><em>40&percnt;</em></span></dd>
+										<dt>MyBB</dt>	
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="24"><em>24&percnt;</em></span></dd>
+										<dt>Invision Forums</dt>
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="22"><em>22&percnt;</em></span></dd>
+										<dt>Mingle Forums plugin</dt>	
+											<dd class="seventh bar"><span class="seventh-one slide" data-percent="21"><em>21&percnt;</em></span></dd>
+										<dt>Discourse</dt>	
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="8"><em>8&percnt;</em></span></dd>
+										<dt>WP Forum Server plugin</dt>	
+											<dd class="ninth bar"><span class="ninth-one slide" data-percent="8"><em>8&percnt;</em></span></dd>
+										<dt>Simple Machine Forums</dt>	
+											<dd class="eleventh bar"><span class="eleventh-one slide" data-percent="8"><em>8&percnt;</em></span></dd>
+										<dt>Kunena (Joomla)</dt>
+											<dd class="tenth bar"><span class="tenth-one slide" data-percent="6"><em>6&percnt;</em></span></dd>
+										<dt>XenForo</dt>	
+											<dd class="twelvth bar"><span class="twelfth-one slide" data-percent="3"><em>3&percnt;</em></span></dd>
+										
+									</dl>
+								</div>
+							</article>							
+						</div><!-- .col6 -->
+						<div class="grid col6 end">
+							<article>
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-bar-chart-o"></i>
+										<h3>Requested Improvements &amp; New Features</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content">
+									<dl class="feature-requests clearfix">
+										<dt>Attachments	</dt>	
+											<dd class="first bar"><span class="first-one slide" data-percent="42"><em>42&percnt;</em></span></dd>
+										<dt>Unread Replies</dt>	
+											<dd class="second bar"><span class="second-one slide" data-percent="39"><em>39&percnt;</em></span></dd>
+										<dt>Moderation tools in the front end</dt>	
+											<dd class="third bar"><span class="third-one slide" data-percent="34"><em>34&percnt;</em></span></dd>
+										<dt>Quotes</dt>	
+											<dd class="fourth bar"><span class="fourth-one slide" data-percent="31"><em>31&percnt;</em></span></dd>
+										<dt>Ajaxification of Topics and Replies</dt>
+											<dd class="fifth bar"><span class="fifth-one slide" data-percent="26"><em>26&percnt;</em></span></dd>
+										<dt>Topic/Reply Ratings</dt>	
+											<dd class="sixth bar"><span class="sixth-one slide" data-percent="25"><em>25&percnt;</em></span></dd>
+										<dt>Resolved/Unresolved topic categories</dt>
+											<dd class="seventh bar">><span class="seventh-one slide" data-percent="23"><em>23&percnt;</em></span></dd>
+										<dt>Private Replies</dt>	
+											<dd class="eighth bar"><span class="eighth-one slide" data-percent="23"><em>23&percnt;</em></span></dd>
+										<dt>Other Option &ast;</dt>
+											<dd class="ninth bar"><span class="ninth-one slide" data-percent="20"><em>20&percnt;</em></span></dd>
+									</dl>
+									<hr />
+									*<em>Other option</em>:
+									<ul>
+										<li>Traditional forums layout - Categories</li>
+										<li>Better support in forums</li>
+										<li>Permissions system</li>
+										<li>More than one forum limit per BuddyPress Group</li>
+										<li>More user-friendly</li>
+										<li>Needs better documentation</li>
+										<li>Forum access by user role</li>
+										<li>Improve performance for larger sites/users</li>
+										<li>More layout options</li>
+										<li>Needs more features</li>
+										<li>Private Messaging</li>
+										<li>Mobile-first Responsive</li>
+									</ul>
+								</div>
+							</article>
+						</div><!-- .col6 -->
+					</div><!-- .row -->	
+
+					<div class="row">					
+						<div class="grid col12 clearfix">
+							<article class="comments">
+								<header>
+									<div class="panel-title">
+										<i class="fa fa-comments-o"></i>
+										<h3>Comments about bbPress or Survey</h3>
+									</div>
+									<div class="no-show"></div>
+								</header>
+								<div class="panel-content clearfix">
+									<div id="survey-comments" class="grid col12">
+									
+									<blockquote>I want to see bbPress on wordpress.com</blockquote>
+									
+									<blockquote>A big thank you to all who are part of making bbPress what it is!</blockquote>
+									
+									<blockquote>You did an amazing job with bbPress 2.x! The WordPress plugin was a revolution when released in 2011, and it is still today! There's nothing on the market which compares to the philosophy, development and coding of bbPress - and its extensibility!<br />
+									Yes, it may lack some features, but overall it's an awesome product, that is rock solid, scales and is very easy to setup and use.<br />
+									So thank you all for your time to develop and maintain it. I, and many other of my WordPress dev friends will keep amazed by it and develop more add-on plugins! For sure :)!</blockquote>
+									
+									<blockquote>Needs a lot more focus on adding front end features both for users and mods/admins. There is a serious lack of traditional forum features that people expect to have, and it really holds bbpress back. </blockquote>
+									
+									<blockquote>Amazing software with amazing inline documentation. The code is so neat compared to whatever other plugins there are in the repo. I always return to bbPress for looking up how to code new stuff the proper way.</blockquote>
+									
+									<blockquote>bbPress is great for simple forums, but it's just not capable of powering any serious online community without the help of copious plugins and lots of custom written code.</blockquote>
+									
+									<blockquote>I would really like to see three things in bbpress:<br />
+									1, Better performance<br />
+									2, Better profiles with things like support for signatures and simple badges<br />
+									3, Attachments!!!</blockquote>
+									
+									<blockquote>bbPress rocks! Thanks to all the developers and bbPress community!</blockquote>
+									
+									<blockquote>Thanks for listening!</blockquote>
+									
+									<blockquote>I love the work you're doing and the progress bbPress made. Really the only thing that's really an issue is the post count thing.<br />
+									In community forums "member motivation" means everything and a post count is one of the most basic things we can do.<br />
+									On the other hand the progress with theme compatibility, responsiveness (I'm using bbPress in responsive environments) and other things are amazing.<br />
+									Thank you so much!</blockquote>
+									
+									<blockquote>Thanks for a great plugin! :)</blockquote>
+									
+									<blockquote>Thanks! I really hope bbpress gets some more attention.</blockquote>
+									
+									<blockquote>bbpress is behind in terms of functions. good legacy plugins but unsupported for bbpress plugin.</blockquote>
+																		
+									<blockquote>API doesn't resemble WordPress sufficiently</blockquote>
+									
+									<blockquote>Keep up the great work!</blockquote>
+									
+									<blockquote>In general a good plugin. If Attachments and a ANTI-Spam solution could be integrated right into the core, it would be a really great solution.</blockquote>
+									
+									<blockquote>You need to stop relying on plugins.... plugins are being exploited by "seo" spammers and arw wrecking wordpress.....I only trust wordpress offical plugins like bbpress and buddypress all others can potentially be hacked so wordpress should incorporate and create secure plugins for wordpress and not thrid parties.</blockquote>
+																		
+									<blockquote>Add home page stats, forum view like vbulletin or ipb, as now is really confusing.</blockquote>
+									
+									<blockquote>It greatly improved since 2.x. Great product, keep up the good work!</blockquote>
+									
+									<blockquote>I'd love to get some support with styling my bbPress form.</blockquote>
+									
+									<blockquote>Add more features.</blockquote>
+									
+									<blockquote>It's good start to improve bbPress based on community opinions.</blockquote>
+									
+									<blockquote>Please keep up your great work! I really appreciate all the time you invest in this plugin. Please make a croudfunding once a year like Wikipedia!</blockquote>
+									
+									<blockquote>The only major thing lacking in bbPress is a more traditional forum layout design.</blockquote>
+									
+									<blockquote>If you could make a legit members chat that's not gimicky and works with members / permissions which can be moderated, that would totes be tits!</blockquote>
+									
+									<blockquote>I would like to see a number of improvements to the bbPress.org website itself, especially with regards to search, documentation, and navigation. Also, it's disappointing that there is no guarantee bbPress will work out of the box with any theme even with bbPress default theme compatibility as I recently found out. bbPress should work with any WordPress theme without requiring me to move template files or go through some weird configuration process.</blockquote>		
+									
+									<blockquote>I really like bbPress & my all current forums are created with bbPress. bbPress development is not so much ACTION, like the WordPress development is really active.</blockquote>
+									
+									<blockquote>One of my major complaints about bbPress and what has kept me from implementing it in many sites is the lack of user roles. Many times I need to allow some registered users access to forums A, B, C and special users access to A, B, C and D, and I may even have another group who should only be able to access B and D. Adding custom roles is a much needed feature by MANY forum owners and a big reason for Simple:Press success (easy to install, plus features most, if not all major forum features).</blockquote>
+									
+									<blockquote>Need only one menu where to regroup all together plugins and functions, now it's a mess, with a pletora of plugins that need for basic functions and some are under settings, other their own menu, other in BBpress settings, it's chaos.<br />									
+									Also, if a forum is big, the posts table become to much bigger to migrate easily, better to have its own SQL tables and possibility to export separately. Thanks for your work</blockquote>
+									
+									<blockquote>about this survey : a bit too long. put demographic questions at the end</blockquote>
+									
+									<blockquote>All of the options in Q.23 (features) would be wicked awesome, it was very hard to limit it to three. I love bbPress and watching it mature over the past few years has been both enlightening and inspirational. Such a great codebase to learn from.</blockquote>
+									
+									<blockquote>Keep up the good work, don't let it die! I really love the idea behind bbPress - it's just a bummer it gets only a few contributors.</blockquote>
+									
+									<blockquote>This survey needs to specify "YOU HAVE SELECTED TOO MANY CHOICES" before I try and submit. Basic survey design guys...come on.</blockquote>
+																		
+									<blockquote>I was going to embed BBPress on my site but after 4 days of wrangling with it chose to just keep the existing PHPBB installation and run it through an iframe instead. The reason for this is that my forum has over 2000 members and 400k posts. The posts imported fine but no signatures or avatars imported for the members. I cannot manually change 2000 members signatures or avatars so I had to go with PHPBB in an iFrame. If you could add this Import functionality (i.e. PHPBB Avatar and Signature Import) I would make the switch but as it stands I cannot.</blockquote>
+									
+									<blockquote>Need to improve the way images are uploaded into the a post. Also starting and replying to a thread need to be made more similar to traditional forum software. Overly complicated and not intuitive.</blockquote>
+																
+									<blockquote>bbPress need to have more active development, with more features added each new version, and shorter intervals between new major versions... Like a WordPress!</blockquote>
+									
+									<blockquote>It would be awesome if the bbp and bp codex was similar (in design and functionality) to the wp codex. Overall, bbpress is a huge improvement over previous versions. Keep up the good work. Thanks!</blockquote>
+									
+									<blockquote>bbPress' simplicity and extendability is why I use the software. However, it still needs to be more sophisticated in its feature set compared to other software. I have a hard time telling when posts are new (or not), viewing threaded replies easily, etc. Just a general polish and feature enhancement would continue to make it more mature and widely adopted.</blockquote>
+									
+									<blockquote>bbpress needs granular permissions, forum access by wp user role !!!</blockquote>
+									
+									<blockquote>I'm finding it very difficult to make bbpress work. The plugins on the bpress site all seem to be wordpress plugins (ie not bbpress specific), the default design (twenty twelve them on WP) is confusing and difficult to navigate. There doesn't seem to be much going on here and that worries me - will it be supported in the future?</blockquote>
+									
+									<blockquote>Please fix the slow queries!</blockquote>
+									
+									<blockquote>Thank you for your work!</blockquote>
+									
+									<blockquote>We have had major problems integrating bbPress into a WP website. Nothing (plugins) seem to work right the first time. Some plugins (registration/login) don't work at all. Lots of spam. There is no robust online community support. Every feature seems to be a plugin. I can't find a list of active, robust bbPress forums to look at on the Internet.</blockquote>
+									
+									<blockquote>Really wish the documentation wasn't so scattered. More hooks and filters.</blockquote>
+									
+									<blockquote>What is the difference between laptop and desktop on the device question? I can't tell from my GA account. The answer to "have you helped with bbPress" really shouldn't be yes but "only a very little bit"</blockquote>
+									
+									<blockquote>I think this plugin has a lot of great potential. I look forward to seeing how it grows. :-)</blockquote>
+									
+									<blockquote>There is one issue missing in the survey - bbpress really needs its own user registration / user profile with a way to upload avatar front-end editing. There is no way to upload an 'avatar' and ordinary forums users do not have gravatar accounts.. and never will :) at the moment it seems like it's relying either on buddypress or wordpress. <br />
+									The option to disable access to wp-admin should be really turned on by default.<br />
+									wp-admin access should be really for the site contributors / authors NOT for users registered on the forums etc.. even not for bbpress moderators/keymasters<br />
+									To make a successful forum, bbpress also needs to display (I can't even find a plugin) statistics of forum users who are online / and also moderators who are on line so it shows that the forums/site is actually 'alive'<br />
+									And finally, 'New Topic' button should available - similar to other forums software.. Users do not always scroll to the bottom of the forums - especially on mobile phones) and do not have any idea how to post a new topic.<br />
+									so, bbpress should be easy and straight forward to use.. so it is a pleasure to use..
+									(especially for new users - who are these days used to Facebook etc.. ) or forums software will die! :(<br />
+									I hope my comments will be useful</blockquote>
+									
+									<blockquote>We need more forum features not just simple topics and replies. I can do that with simple wordpress theme. As a forum we need more features. My critique bbPress development is very slow. It is become official plugin like 2-3 years ago and still plugin is dont have forum fatures.</blockquote>
+									
+									<blockquote>You guys seem to know your requested features pretty well, and Ive taken the survey, so I wont go on about that. Please allow us to customize strings like freshness and topics. I want "Latest Reply", so I should be able to customize that. Same with topics. I prefer "Threads".<br />
+									Topic and reply count should be listed under it's own column, nicely spaced out and centered, like other forum softwares.<br />
+									Allow us to customize these strings, as well as having dividers (clear space) between each category, just like how any forums are (XenForo, phpBB, etc.)<br />
+									I LOVE bbPress and I am confident these things will be fixed, but development is too slow. The stuff I listed are pretty much of utmost importance if bbPress is to be anything considerable.</blockquote>
+									
+									<blockquote>bbPress is mainly lacking in the moderation area compared with dedicated forum scripts. In particular, I need to be able to block and warn users if they violate forum guidelines.<br />
+									Then, bbPress developers should evaluate architecture and code changes for a substantial improvement in speed. Specially users coming from phpBB forums will find performance of bbPress disappointing.<br />
+									Last but not least: Many thanks for this excellent plugin. I have extensively evaluated just about every option on the market (commercial and free), which allows one to build a community CMS + Forum plattform. The WP+Buddypress+bbPress ecosystem is the only solution out there which fitted all of my needs.<br />
+									I would be willing to help sponsor certain developments, and am sure many other serious users would be as well. For this, I suggest that you come up with some sort of pledge system, where users can input feature requests and the community can pledge an amount to get it developed. This could be win-win, because the developers would get money for their work and the users get the features they want. Please think about it.</blockquote>
+									
+									<blockquote>Most of my users do not like bbPress, instead prefer a phpbb3 forum feel. I switched to it because it integrates with WordPress and I did not want my users to have to create two accounts. bbPress works great for forums such as this, support forums and such, but it's not easy to navigate for users who visit daily and are trying to make sure they aren't missing any new posts. That is what true social sites really want to cater to, those are the members who are the core and keep everyone else coming back, so we really want to keep them happy.</blockquote>
+									
+								</div><!-- .col12 -->
+							</article>
+						</div>
+					</div><!-- .col12 -->
+				</div><!-- #opinions-requests -->
+			</section><!-- .opinions-request -->								
+
+			<div class="buttons clearfix">
+				<a href="http://bbPress.org/blog/" class="button" alt="Back to the bbPress 2014 Survey Report">Back to the Survey Report</a> 
+			</div>
+		</main>
+
+		<div id="footer" class="row">	
+			<footer class="col12" role="contentinfo">
+				<p>&copy; 2014 <a href="humans.txt" alt="bbPress, Forums for WordPress">bbPress</a>.</p>
+			</footer>
+		</div><!-- #footer -->	
+		<a href="#" class="scroll-to-top"><i class="fa fa-arrow-up"></i></a>
+	</div><!-- #bbpress -->
+	<script src="js/bbpreport.js"></script>	
+</body>
+</html>
